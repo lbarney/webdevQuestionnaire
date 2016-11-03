@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="devQues">
+<head>
+	<title>Web Dev Questionnaire</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <script src="https://use.fontawesome.com/dc370bfd79.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+	<a href="http://lbdev.us" target="blank"><div class="header"><h1>Welcome to LB Development</h1></div></a>
+	<div class="inst">
+		<p>Please provide as much information as possible, however you do not need to answer all the questions to submit the form.</p>
+	</div>
+<div class="form">
+	<form ng-submit="addUser(user)" onkeydown="if (event.keyCode == 13){alert('Please Fill in all fields and press the Submit button at the bottom of the Form');return false;}">
+		<ul>
+			<li>First Name:<input type="text" ng-model="user.first"></li>
+			<li>Last Name:<input type="text" ng-model="user.last"></li>
+			<li>Email Adress:<input type="text" ng-model="user.email"></li>
+			<li>Please tell us about you and your company.<input type="text" ng-model="user.pleaseTellMeAboutYourCompany"></li>
+			<li>Describe your target audience.<input type="text" ng-model="user.describeYourTargetAudiencd"></li>
+			<li>What makes you different from your competitors?<input type="text" ng-model="user.whatMakeYouDifferent"></li>
+			<li>Why should people do business with you rather than your competitors?<input type="text" ng-model="user.whyShouldPeopleDoBusinessWithYou"></li>
+			<li>Do you have specific company colors that need to be used?<input type="text" ng-model="user.doYouHaveSpecificCompanyColors"></li>
+			<li>Can you provide the Pantone numbers for your company colors?<input type="text" ng-model="user.canYouProvidePantoneNumbers"></li>
+			<li>Do you have any other materials that the site needs to match with in some way (brochures, press materials, etc.)?<input type="text" ng-model="user.doYouHaveAnyOtherMaterialsThatNeedToMatch"></li>
+			<li>Do you have a logo you plan to use or will one need to be created?<input type="text" ng-model="user.doYouHaveALogo"></li>
+			<li>What do your current competitors’ websites have that you wish to have?<input type="text" ng-model="user.whatDoYourCompetitorsWebSitesHaveThatYouWant"></li>
+			<li>Are there any websites with designs that you like?<input type="text" ng-model="user.areThereAnyWebSiteDesignsYouLike"></li>
+			<li>What about those websites would you like to be incorporated into your website?<input type="text" ng-model="user.WhatAboutThoseWebsitesDoYouWantToIncorparateInYourSite"></li>
+			<li>What types of things do you see on other websites that you really hate?<input type="text" ng-model="user.whatTypesOfThingsDoYouSeeOnOtherSitesThatYouHate"></li>
+			<li>Where is your website hosted?<input type="text" ng-model="user.whereIsYourWebSiteHosted"></li>
+			<li>Do you have full access?<input type="text" ng-model="user.doYouHaveFullAccess"></li>
+			<li>Can you provide usernames and passwords?<input type="text" ng-model="user.canYouProvideUserNamesAndPasswords"></li>
+			<li>Do you already have a URL you plan to use?<input type="text" ng-model="user.doYouAlreadyHaveAUrlYouPlanToUse"></li>
+			<li>How many pages will the finished website be (estimated)?<input type="text" ng-model="user.howManyPagesWillTheFinishedWebsiteBeEstimated"></li>
+			<li>Do you have the content for the website or will content creation be a part of the scope of work?<input type="text" ng-model="user.doYouHaveContentForTheSiteOrWillContentCreationBePartOfTheJob"></li>
+			<li>How many pages of content will need to be developed?<input type="text" ng-model="user.howManyPagesWillBeDeveloped"></li>
+			<li>Do you require your site to be mobile friendly (responsive design)?<input type="text" ng-model="user.doYouRequireTheSiteToBeMobileFriendly"></li>
+			<li>Does your site need a blog or a forum?<input type="text" ng-model="user.doYouNeedABlogOrForum"></li>
+			<li>Do you want contact phone numbers prominently displayed?<input type="text" ng-model="user.doYouWantContactPhoneNumbersProminentlyDisplayed"></li>
+			<li>What is your time frame for total project completion?<input type="text" ng-model="user.whatIsYourTimeFrameForTotalProjectCompletion"></li>
+		</ul>
+		<input type="submit" name="" onclick= "alert('Thank You for Your Submission')">
+	</form>
+</div>
+	<div class="address">
+		<address>
+			Designed by <a href="mailto:lance@lbdev.us">Lance Barney</a>.<br>
+			Visit my LinkedIn page:<a href="https://www.linkedin.com/in/lance-barney"> <i class="fa fa-linkedin-square" aria-hidden="true"></i></a><br>
+			668 W. Dry Creek Rd. Belgrade, Montana<br>
+			USA<br><br>
+			&copy LB Development, 2016
+		</address>
+	</div>
+	
+	
+
+	
+	
+
+
+
+
+	<script src="app.js"></script>
+	<script src="mainCtrl.js"></script>
+</body>
+</html>
